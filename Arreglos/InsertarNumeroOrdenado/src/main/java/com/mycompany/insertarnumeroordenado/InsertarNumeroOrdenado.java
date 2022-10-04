@@ -14,7 +14,6 @@ public class InsertarNumeroOrdenado {
         Scanner entrada = new Scanner(System.in);
         int[] ar = new int[10];
         int num, pos=0;
-        boolean cre=true;
         
         // llenar el arreglo
         for (int i = 0; i < 5; i++) {
@@ -27,22 +26,18 @@ public class InsertarNumeroOrdenado {
         //preuntar el número
         System.out.println("cual es el número que desea agregar?");
         num = entrada.nextInt();
+                              
+        //consigue la posición en el arreglo
+        while (num>ar[pos]){
+            pos++;
+        }
         
-                       
-        //desplazar el arreglo
-        do{
-            if (num<ar[pos] && num>ar[pos-1]){
+        //desplaza los digitos
+        for (int i = 1; i<=pos; i++) {
+            ar[i-1] = ar [i];
+            if (i==pos) ar[i-1]=num;
+        }
                 
-            
-            num = ar[9];
-            for (int i = 8; i>=0; i--) {
-                ar[i+1] = ar [i];
-            }
-            ar[0]= num;
-            }pos++;
-        }while (num<ar[pos]);
-        
-        
         //imprimir el arreglo
         System.out.print("\nEl ahora es arreglo es:\n[ ");
         for (int i = 0; i < ar.length; i++) {

@@ -11,5 +11,5 @@
         <maven.compiler.target>19</maven.compiler.target>
         <exec.mainClass>com.mycompany.desplazararreglo.DesplazarArreglo</exec.mainClass>
     </properties>
-    <name>08. Desplazar arreglo n casillas</name>
+    <name>08. Desplazar arreglo</name>
 </project>
