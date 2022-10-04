@@ -1,17 +1,34 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
- */
-
 package com.mycompany.matrizidentidad;
 
+import java.util.Scanner;
+
 /**
- *
- * @author Santiago Rojas
+ * Crear una matriz de tamaño 7x7 y rellenarla de forma que los lementos de la
+ * diagonal principal sean 1 y el resto 0.
  */
 public class MatrizIdentidad {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        int matI[][] = new int[7][7];
+
+        //llenar matriiz I
+        for (int i = 0; i < matI.length; i++) {
+            for (int j = 0; j < matI[i].length; j++) {
+                if (i == j) {
+                    matI[i][j] = 1;
+                }
+            }
+        }
+
+        //Imprimir matriz
+        System.out.println("\n la matriz generada es:\n");
+        for (int i = 0; i < matI.length; i++) {
+            System.out.print("|");
+            for (int j = 0; j < matI[i].length; j++) {
+                System.out.print(matI[i][j]);
+                if (j != matI[i].length - 1) System.out.print("\t");
+            }
+            System.out.println("|");
+        }
     }
 }
